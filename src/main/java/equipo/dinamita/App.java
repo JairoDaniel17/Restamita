@@ -9,11 +9,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
- * JavaFX App
+ * JavaFX App Equipo Dinamita
  */
 public class App extends Application {
 
     private static Scene scene;
+    private String nombres;
 
     @Override
     public void start(Stage stage) throws IOException {
