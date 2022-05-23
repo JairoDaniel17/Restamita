@@ -30,18 +30,60 @@ public class PrimaryController {
 
     @FXML
     void confirmacion() throws IOException {
-        String condicional = "admin";
+        String usuario = "admin";
         String clave = "123";
-        if (darUsuario().equals(condicional) && darContraseña().equals(clave)) {
-            switchToSecondary();//abrir pantalla 2
-        } else {
+        String m = "";
+        boolean bandera = true;
+        if (darUsuario().equals(usuario)) {
+            if (darContraseña().equals(clave)) {
+                switchToSecondary();
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText(null);
+                alert.setTitle("Error");
+                alert.setContentText("La contraseña es incorrecta, vuelva insertarlo");
+                alert.showAndWait();
+            }
+        } else if (darUsuario().equals(m) & darContraseña().equals(m)) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
-            alert.setContentText("Los campos son erroneós o están vacios");
+            alert.setContentText("El usuario y la contraseña estan vacios");
             alert.showAndWait();
+        } else if (darUsuario().equals(m)) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("El usuario esta vacio,inserte un usuario");
+            alert.showAndWait();
+        } else if (darContraseña().equals(m)) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("La contrseña esta vacia, inserte una contraseña");
+            alert.showAndWait();
+        } else {
+            if (darUsuario().equals(usuario)) {
+            } else {
+                if (darContraseña().equals(clave)) {
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setHeaderText(null);
+                    alert.setTitle("Error");
+                    alert.setContentText("El usuario y la contraseña son incorrectos, vuelva ingresarlos");
+                    alert.showAndWait();
+                    bandera = false;
+                }
+            }
+            if (bandera == false) {
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText(null);
+                alert.setTitle("Error");
+                alert.setContentText("El nombre del usuario es incorrecto, vuelva a insertarlo");
+                alert.showAndWait();
+            }
         }
-
     }
 
     @FXML
