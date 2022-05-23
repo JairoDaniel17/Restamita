@@ -19,14 +19,14 @@
         <AnchorPane layoutX="383.0" prefHeight="595.0" prefWidth="516.0" style="-fx-background-color: #ECEBE7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="383.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
                 <Label layoutX="136.0" layoutY="268.0" text="Usuario:" />
-                <Button fx:id="primaryButton" layoutX="214.0" layoutY="381.0" onAction="#switchToSecondary" text="Iniciar sesión">
+                <Button fx:id="primaryButton" layoutX="214.0" layoutY="381.0" onAction="#confirmacion" text="Iniciar sesión">
                <font>
                   <Font size="13.0" />
                </font></Button>
             <Label layoutX="136.0" layoutY="315.0" text="Contraseña:" />
-            <TextField layoutX="239.0" layoutY="264.0" />
-            <PasswordField layoutX="239.0" layoutY="320.0" />
-            <Button layoutX="239.0" layoutY="434.0" mnemonicParsing="false" text="Salir" />
+            <TextField fx:id="txtusuario" layoutX="239.0" layoutY="264.0" />
+            <PasswordField fx:id="txtpassword" layoutX="239.0" layoutY="320.0" />
+            <Button fx:id="btnsalir" layoutX="239.0" layoutY="434.0" mnemonicParsing="false" onAction="#botonSalir" text="Salir" />
             <AnchorPane layoutX="160.0" layoutY="43.0" prefHeight="200.0" prefWidth="200.0">
                <children>
                   <ImageView fitHeight="102.0" fitWidth="92.0" layoutX="54.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">

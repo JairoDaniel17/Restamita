@@ -12,17 +12,30 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="equipo.dinamita.PrimaryController">
     <children>
         <AnchorPane layoutX="383.0" prefHeight="595.0" prefWidth="516.0" style="-fx-background-color: #ECEBE7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="383.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <Label layoutX="138.0" layoutY="196.0" text="Usuario:" />
-                <Button fx:id="primaryButton" layoutX="228.0" layoutY="329.0" onAction="#switchToSecondary" text="Iniciar sesión" />
-            <Label layoutX="138.0" layoutY="243.0" text="Contraseña:" />
-            <TextField layoutX="230.0" layoutY="192.0" />
-            <PasswordField layoutX="230.0" layoutY="239.0" />
-            <Button layoutX="251.0" layoutY="378.0" mnemonicParsing="false" text="Salir" />
+                <Label layoutX="136.0" layoutY="268.0" text="Usuario:" />
+                <Button fx:id="primaryButton" layoutX="214.0" layoutY="381.0" onAction="#confirmacion" text="Iniciar sesión">
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+            <Label layoutX="136.0" layoutY="315.0" text="Contraseña:" />
+            <TextField fx:id="txtusuario" layoutX="239.0" layoutY="264.0" />
+            <PasswordField fx:id="txtpassword" layoutX="239.0" layoutY="320.0" />
+            <Button fx:id="btnsalir" layoutX="239.0" layoutY="434.0" mnemonicParsing="false" onAction="#botonSalir" text="Salir" />
+            <AnchorPane layoutX="160.0" layoutY="43.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="102.0" fitWidth="92.0" layoutX="54.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../imagenes/USUARIO.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
             </children>
         </AnchorPane>
         <AnchorPane layoutY="-87.0" prefHeight="595.0" prefWidth="385.0" style="-fx-background-color: #222222;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="515.0" AnchorPane.topAnchor="0.0">
