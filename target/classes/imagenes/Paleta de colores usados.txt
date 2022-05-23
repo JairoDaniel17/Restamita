@@ -1,0 +1,8 @@
+Pantalla 1
+lateral izquierdo #222222 (NEGROMARRÓN)
+lateral derecho #ECEBE7 (GRIS)
+
+
+
+
+Pantalla 3
