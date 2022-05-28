@@ -37,6 +37,12 @@ public class PrimaryController {
         if (darUsuario().equals(usuario)) {
             if (darContraseña().equals(clave)) {
                 switchToSecondary();
+            } else if (darContraseña().equals(m)) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText(null);
+                alert.setTitle("Error");
+                alert.setContentText("La contrseña esta vacia, inserte una contraseña");
+                alert.showAndWait();
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
@@ -54,13 +60,7 @@ public class PrimaryController {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
-            alert.setContentText("El usuario esta vacio,inserte un usuario");
-            alert.showAndWait();
-        } else if (darContraseña().equals(m)) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText(null);
-            alert.setTitle("Error");
-            alert.setContentText("La contrseña esta vacia, inserte una contraseña");
+            alert.setContentText("El usuario esta vacio, inserte un usuario");
             alert.showAndWait();
         } else {
             if (darUsuario().equals(usuario)) {
@@ -84,10 +84,11 @@ public class PrimaryController {
                 alert.showAndWait();
             }
         }
-    }
+    }//@Jairo
+
 
     @FXML
-    private void switchToSecondary() throws IOException {
+    private void switchToSecondary() throws IOException {//me manda a la siguiente pantalla (pantalla 2)
         App.setRoot("secondary");
     }
 
